@@ -15,9 +15,6 @@ public class Animal {
             case "cat":
                 this.weight = 2.0;
                 break;
-            case "mouse":
-                this.weight = 0.01;
-                break;
             default:
                 this.weight = 1.0;
         }
