@@ -1,9 +1,9 @@
-package com.company;
+package com.company.creatures;
 
 public class Animal {
     final public String species;
-    private Double weight;
     String name;
+    private Double weight;
 
     public Animal(String species) {
         this.species = species;
@@ -20,25 +20,25 @@ public class Animal {
         }
     }
 
-    void feed() {
+    public void feed() {
         if (this.weight > 0) {
             this.weight += 1.0; //weight = weight + 1.0
-            System.out.println("thx for food, my weight: "+ this.weight);
+            System.out.println("thx for food, my weight: " + this.weight);
         } else {
             System.out.println("tera to trochę późno :|");
         }
     }
 
-    void takeForAWalk() {
+    public void takeForAWalk() {
         if (this.weight > 0) {
             this.weight -= 0.2;
             System.out.println("thx, nice walk, my weight: " + this.weight);
-        }else {
+        } else {
             System.out.println("nie można łazić z martwym zwierzakiem po ulicy :|");
         }
     }
 
-    void printName() {
+    public void printName() {
         System.out.println("my name is: " + this.name);
     }
 
