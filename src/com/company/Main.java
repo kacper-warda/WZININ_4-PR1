@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args) {
 
         Human me = new Human("Warda");
-        Car passat1 = new Car("vw", "passat");
+        Car passat1 = new Car("vw", "passat", 1992);
         passat1.millage = 80000.0;
-        Car passat2 = new Car("vw", "passat");
+        Car passat2 = new Car("vw", "passat", 2008);
         passat2.millage = 80000.0;
 
         Car passat3 = passat1;

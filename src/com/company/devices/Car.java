@@ -1,20 +1,16 @@
 package com.company.devices;
 
-public class Car {
-    public final String producer;
-    public final String model;
+public class Car extends Device {
     public double millage;
     public String color;
     public double engineVolume;
 
-    public Car(String producer, String model) {
-        this.producer = producer;
-        this.model = model;
+    public Car(String producer, String model, Integer yearOfProduction) {
+        super(producer, model, yearOfProduction);
     }
 
-    public Car(String producer, String model, double millage, String color, double engineVolume) {
-        this.producer = producer;
-        this.model = model;
+    public Car(String producer, String model, Integer yearOfProduction, double millage, String color, double engineVolume) {
+        super(producer, model, yearOfProduction);
         this.millage = millage;
         this.color = color;
         this.engineVolume = engineVolume;
