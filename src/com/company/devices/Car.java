@@ -9,6 +9,14 @@ public class Car extends Device {
         super(producer, model, yearOfProduction);
     }
 
+    @Override
+    public void turnOn() {
+        System.out.println("otwórz drzwi");
+        System.out.println("klucz w stacyjkę");
+        System.out.println("przekręć");
+        System.out.println("poczeka aż silnik (mam nadzieję) zapali");
+    }
+
     public Car(String producer, String model, Integer yearOfProduction, double millage, String color, double engineVolume) {
         super(producer, model, yearOfProduction);
         this.millage = millage;

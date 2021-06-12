@@ -6,7 +6,7 @@ import com.company.devices.Car;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Human me = new Human("Warda");
         Car passat1 = new Car("vw", "passat", 1992);
@@ -14,31 +14,20 @@ public class Main {
         Car passat2 = new Car("vw", "passat", 2008);
         passat2.millage = 80000.0;
 
-        Car passat3 = passat1;
+        Animal szarik = new Animal("dog");
+        me.pet = szarik;
 
-        System.out.println(passat1 == passat2);
-        System.out.println(passat1);
-        System.out.println(passat2);
-        System.out.println(passat1 == passat3);
-        System.out.println(passat1.equals(passat2));
-        System.out.println(passat1.equals(me));
+        Human brotherInLow = new Human("Grygo");
+        szarik.sell(me, brotherInLow, 100.0);
 
-        me.setSalary(123123.2);
 
-        me.feed();
-        me.takeForAWalk();
-        System.out.println(me.species);
-        me.printName();
+        System.out.println(me.cash);
+        System.out.println(brotherInLow.cash);
+        System.out.println(me.pet);
+        System.out.println(brotherInLow.pet);
 
-        System.out.println(me instanceof Animal);
-        System.out.println(me instanceof Human);
-        System.out.println(me instanceof Object);
-
-        me.hashCode();
-        try {
-            passat1.wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Human someOtherHuman = new Human("Kowalski");
+        me.pet = someOtherHuman;
+        someOtherHuman.sell(me, brotherInLow, 5.0);
     }
 }
